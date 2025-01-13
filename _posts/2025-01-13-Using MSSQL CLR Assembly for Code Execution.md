@@ -61,12 +61,7 @@ The next step is to create a custom .NET assembly that will allocate memory, inj
 
 We’ll now create a **custom .NET assembly** that allocates memory, injects shellcode, and executes it using **Windows API calls**.
 
-### **Open Visual Studio**
-
-- Launch **Visual Studio**.
-- Click on **File > New > Project**.
-- Select **Class Library (.NET Framework)**.
-- Name the project `MSSQL_ShellCodeLoader` and click **Create**.
+## **Open Visual Studio**
 
 ### Create a New SQL Server Project
 
