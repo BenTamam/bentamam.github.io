@@ -25,7 +25,6 @@ For this walkthrough, the following setup was used:
 - **SQL Server Version**: SQL Server 2022 Developer Edition
 - **SQL Server Management Studio (SSMS)**: Latest version
 - **Operating System**: Windows 10 Pro (64-bit)
-- **Tools Used**: Visual Studio, Python, SSMS, and msfvenom for shellcode generation
 
 Here’s a quick look at my **SQL Server setup** after installation:
 ```sql
