@@ -87,7 +87,7 @@ We’ll now create a **custom .NET assembly** that allocates memory, injects she
 
 ### Writing the Shellcode Loader in C#
 
-Here’s the C# code for the shellcode loader:
+The following shellcode is a basic shellcode loader, utilizing a widely known technique to demonstrate shellcode injection. This method is commonly used to showcase how shellcode can be injected and executed. 
 
 ```c#
 using System;
