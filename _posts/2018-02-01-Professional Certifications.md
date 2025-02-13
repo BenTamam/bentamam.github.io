@@ -4,7 +4,7 @@ description: A collection of expensive PDFs that say I know things.
 categories: [certifications, achievements]
 comments: false
 tags: [security, certifications, penetration-testing, networking]
-date: 2018-01-01
+date: 2018-02-01
 ---
 
 ## Cybersecurity & Penetration Testing Certifications
