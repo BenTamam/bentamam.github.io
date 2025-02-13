@@ -1,10 +1,10 @@
 ---
-title: "Professional Certifications - Proof of Commitment"
-description: A collection of industry-recognized certifications earned through experience and hands-on testing.
+title: "Professional Certifications"
+description: A collection of expensive PDFs that say I know things.
 categories: [certifications, achievements]
 comments: false
 tags: [security, certifications, penetration-testing, networking]
-date: 2025-02-13
+date: 2018-02-01
 ---
 
 # Professional Certifications  
