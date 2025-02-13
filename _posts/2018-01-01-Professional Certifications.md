@@ -1,6 +1,6 @@
 ---
 title: "Professional Certifications"
-description: A showcase of my cybersecurity and networking certifications.
+description: A collection of expensive PDFs that say I know things.
 categories: [certifications, achievements]
 comments: false
 tags: [security, certifications, penetration-testing, networking]
@@ -46,7 +46,7 @@ date: 2025-02-13
 ### Offensive Security Certified Professional (OSCP)
 - **Issued By:** Offensive Security  
 - **Issued:** Apr 2020  
-- [Show Credential](https://www.credly.com/badges/e4fe2502-7308-47bb-ab88-37837bf68369)
+- [Show Credential](https://www.credly.com/badges/1de43171-94e7-4375-a5a5-49ea114de02d)
 
 ---
 
@@ -55,7 +55,7 @@ date: 2025-02-13
 ### Cisco Certified Network Associate Routing and Switching (CCNA)
 - **Issued By:** Cisco  
 - **Issued:** Jul 2018  
-- [Show Credential](https://www.credly.com/badges/55910dbc-9d2c-4fa6-b4e4-f924f099619a)
+- [Show Credential](https://www.credly.com/badges/e4fe2502-7308-47bb-ab88-37837bf68369)
 
 ### Linux Enterprise Professional Certification (LPIC-1)
 - **Issued By:** Linux Professional Institute (LPI)  
