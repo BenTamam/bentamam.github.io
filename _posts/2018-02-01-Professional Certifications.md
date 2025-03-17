@@ -17,6 +17,7 @@ A curated list of my technical certifications across **cybersecurity, networking
 
 | Certification | Issuer | Issued | Credential |
 |--------------|--------|--------|------------|
+| **Certified Red Team Expert (CRTE)** | Altered Security | Mar 2025 | [View](https://www.credential.net/6ceb5233-1d99-4a02-9e69-af52dfd4e38a) |
 | **Microsoft Cloud Red Team Professional (MCRTP)** | Pwned Labs | Oct 2024 | [View](https://www.credly.com/badges/55910dbc-9d2c-4fa6-b4e4-f924f099619a) |
 | **Offensive Security Experienced Penetration Tester (OSEP)** | Offensive Security | Nov 2022 | [View](https://www.credential.net/03c8783d-76e7-4bc3-a4bd-efb5b750a301#gs.ic0nar) |
 | **Web Application Penetration Testing Extreme v2 (eWPTXv2)** | INE Security (FKA eLearnSecurity) | Jan 2022 | [View](https://verified.elearnsecurity.com/certificates/7744d79d-996b-48d0-9ab6-ebbab33bc74f) |
