@@ -1,6 +1,6 @@
 ---
-title: "Certified Red Team Expert (CRTE) – My Experience and Review"
-description: Practical insights from 60 days in the CRTE lab and a successful exam attempt.
+title: "Certified Red Team Expert (CRTE) – 60 Days of Forest Hopping and Ticket Forging"
+description: I abused Kerberos, broke into forests, bypassed MDI... and earned another PDF
 categories: [certifications, red-teaming]
 comments: false
 tags: [CRTE, Active-Directory, penetration-testing, certification-review]
@@ -14,6 +14,7 @@ After completing CRTP and gaining hands-on red teaming experience, I decided to 
 I chose the **60-day self-paced version** without the bootcamp. While I was familiar with most of the content, the **structured lab**, **multi-forest scenarios**, and **exam format** still provided valuable hands-on challenges.
 
 ![CRTE Certificate](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/136944578)
+> *Proof I spent 300+ hours abusing Kerberos just to earn this piece of digital paper.*
 
 ---
 
@@ -72,18 +73,14 @@ The exam gives you **48 hours** (plus a bonus hour), followed by **47 hours** fo
 
 Reporting matters as much as the exploitation.
 
-- I used Markdown + Report Ranger by Volkis
-- Final report: ~40 pages with detailed attack chains, screenshots, and remediations
+- Final report: ~50 pages with detailed attack chains, screenshots, and remediations
 
 
 ---
 
-## Conclusion
+**TL;DR:**
 
-CRTE is one of the most practical and relevant red team certifications for AD-heavy environments. It goes beyond theory into **defense-aware offensive security**, covering all aspects from persistence to trust boundary abuse.
-
-It’s not for complete beginners, but for anyone with a CRTP-level foundation, it’s the perfect next step.
-
----
-
-If you’re considering CRTE and enjoy building tradecraft—not just solving challenges—then you’ll enjoy this course.
+- 60 days of lab time is perfect if you know your way around AD  
+- The exam is more “real engagement” than “CTF”  
+- You’ll walk out with new tools, new scars, and probably a hatred of delegation  
+- Worth every shekel  
