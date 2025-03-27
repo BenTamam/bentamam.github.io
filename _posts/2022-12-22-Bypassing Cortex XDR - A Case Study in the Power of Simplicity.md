@@ -1,78 +1,90 @@
 ---
-title: "Bypassing Cortex XDR"
-description: Broke it, disclosed it, patched it.
-categories: [security-research, EDR]
+title: "Certified Red Team Expert (CRTE) – My Review & Takeaways"
+description: From CRTP to CRTE – the deep dive into multi-forest AD attacks and modern evasion.
+categories: [certifications, red-teaming]
 comments: false
-tags: [penetration-testing, offensive-security]
-date: 2022-12-22
+tags: [CRTE, Active-Directory, offensive-security, penetration-testing]
+date: 2025-03-27
 ---
-
 
 ## Introduction
 
-As a Red Teamer, I've spent considerable time analyzing EDR solutions. Today, I'm sharing my research on bypassing Cortex XDR's tampering protection - a vulnerability that has since been patched. This analysis was conducted under Palo Alto Networks' responsible disclosure policy and relates to patch PAN-SA-2022-0005.
+After completing CRTP and wanting to take things to the next level, I enrolled in the **Certified Red Team Expert (CRTE)** course by Altered Security. It did not disappoint.
 
-> **Note**: This vulnerability has been patched. This article is published for educational purposes and to demonstrate the importance of continuous security improvements in EDR solutions.
+The course dives deep into **Active Directory exploitation, evasion of modern defenses, and hybrid Azure AD attacks**, all within a multi-forest, fully patched lab environment. This post summarizes my experience, including lab highlights, exam format, and practical tips.
 
-## Agent’s Version
+> **TL;DR:** CRTE isn’t just a certification—it’s a battlefield simulation for experienced red teamers.
 
-The version of the software that was tested was 7.80, and all of its protections were enabled, including tampering protection. The testing was performed in both normal and aggressive modes to evaluate the software’s security capabilities thoroughly.
+## Bootcamp or Self-Paced?
 
-![Cortex-Version](https://miro.medium.com/v2/resize:fit:1374/format:webp/0*PbLOP8kLASxiBntJ.jpg){: width="900" height="400" }
+I opted for the **Bootcamp recordings** version, and I highly recommend it. The structured walkthroughs, doubt-clearing sessions, and extra context made the journey smoother. 
 
+Nikhil’s explanations are practical and experience-driven—this isn’t academic fluff. Expect real-world attack paths and plenty of “ah-ha” moments.
 
-## Disabling the Agent
-As mentioned in PAN-SA-2022–0002, we will try to reproduce and alter the ServiceDLL, which directs Cortex XDR to the exact location of the cryptsvc DLL which is one of Cortex XDR’s dependencies and modifying it could potentially disable the XDR.
+## What You’ll Learn
 
-However, this attempt was unsuccessful, as we anticipated -
-![ServiceDLL Attempt](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*ClfiwhwPsa4TuuI8.png){: width="900" height="400" }
+The course goes far beyond CRTP, covering advanced TTPs like:
 
-## What is tamper protection?
-Tamper protection is a security feature that helps prevent unauthorized changes to a system or device. These changes may include attempts to disable services, modify system files or configuration settings, or access sensitive data. In the context of EDRs, tamper protection can protect the EDR sensor from attempts to disrupt its operation or alter its behavior. By implementing tamper protection, organizations can help ensure the integrity and security of their EDR systems.
+- 🧩 **Abusing modern AD features:** LAPS, gMSA, ADCS, RBCD
+- ☁️ **Hybrid Azure AD abuse**
+- 🔐 **Bypassing security controls:** JEA, CLM, AppLocker, MDI, WDAC
+- 🧠 **Cross-domain & cross-forest attacks**
+- 💣 **Persistence techniques:** Skeleton Key, Diamond Tickets, Shadow Credentials
 
-## Let’s get down to business
-As previously mentioned, Cortex XDR relies on the cryptographic services provided by the Windows operating system. This dependency is necessary for the proper functioning and operation of Cortex XDR -
+All in a **Server 2019** environment with realistic, fully patched setups and trust relationships.
 
-![Cryptographic Services](https://miro.medium.com/v2/resize:fit:750/format:webp/0*fIcRPqDTSZ0-5zav.png){: width="900" height="400" }
+## Lab Experience
 
-To analyze the “cryptsvc.dll” file, we can utilize several tools, such as DUMPBin, a tool included in Visual Studio. The /EXPORT function can be used to display all the definitions exported from the DLL file, providing insight into the functions and data available for use in other programs that import the DLL. Alternatively, DLL Export Viewer can also be used for the same purpose. In this case, we will utilize DLL Export Viewer for our analysis -
-![DLL Export Viewer](https://miro.medium.com/v2/resize:fit:786/format:webp/0*umDdKkvre1Il_5IC.png){: width="900" height="400" }
+Honestly, this is one of the **best labs** I’ve ever worked in:
 
+- Multi-domain, cross-forest, and Azure-connected
+- 60+ flags to validate your progress
+- No brute-force needed—pure logic and tradecraft
+- You’re not left guessing—bootcamp walkthroughs guide you through solid enumeration and abuse chains
 
-We can see that one of the exported functions of the DLL is “CryptServiceMain”, which we found earlier under the “ServiceMain” key’s value. We will attempt to tamper with it by modifying this registry key.
+Tip: **Enumerate harder**. Manual review of BloodHound nodes saved me multiple times.
 
-As mentioned previously, the registry key can be found at `HKLM\SYSTEM\CurrentControlSet\Services\CryptSvc\Parameters\ServiceMain.`
+## The Exam
 
-To complete this task, the following registry file can be utilized -
+- ⏱ 48 hours + 1 bonus hour to complete all objectives
+- 🧾 47 additional hours to submit a report
+- 🖥 Starts from an assumed breach—access to a foothold VM (`userexam`)
+- 💡 5 targets across domains, requiring different privilege escalation and trust abuse chains
+- 🧠 Enumeration-heavy: Know your ACLs, delegation paths, and GPOs
 
-```powershell
-Windows Registry Editor Version 5.00
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CryptSvc\Parameters]
-"ServiceDllUnloadOnStop"=dword:1
-"ServiceMain"="CryptServiceMain_Disable_Cortex"
-```
+> I hit a wall mid-exam. Enumeration saved me. Read every node in BloodHound. Twice.
 
-Or With elevated Command prompt and PowerShell -
+## Reporting
 
-This code uses the New-ItemProperty cmdlet to create new registry values in the specified path. The first value (“ServiceDllUnloadOnStop”) is of type DWord, and the second value (“ServiceMain”) is of type String. The values are set to the same values as in the .reg file.
+CRTE emphasizes operational realism, so reporting matters:
 
-```powershell
-$registryPath = "HKLM:\SYSTEM\CurrentControlSet\Services\CryptSvc\Parameters"
-New-ItemProperty -Path $registryPath -Name "ServiceDllUnloadOnStop" -PropertyType DWord -Value 1
-New-ItemProperty -Path $registryPath -Name "ServiceMain" -PropertyType String -Value "CryptServiceMain_Disable_Cortex"
-```
+- I used **Report Ranger** by Volkis (Markdown-to-PDF)
+- Documented as I went, which made the final 44-page report faster to polish
+- Include: Screenshots, abuse chains, remediations, and references
 
-Upon executing the file,
-![Regedit](https://miro.medium.com/v2/resize:fit:640/format:webp/0*Aq6u5OQftShhiCIf.png){: width="900" height="400" }
+## Final Thoughts
 
-Our analysis reveals that the registry values have been altered, and Cortex XDR has not prevented this activity.
-![Image](https://miro.medium.com/v2/resize:fit:786/format:webp/0*dR3uFArY3DJHvZp1.png){: width="900" height="400" }
+If CRTP was the intro to AD abuse, CRTE is the **advanced campaign**. I walked away with:
 
-Upon restarting the machine, Cortex XDR should be completely disabled.
-![alt text](https://miro.medium.com/v2/resize:fit:750/format:webp/0*U4Yf2l-ffKkev9_W.png){: width="900" height="400" }
+- Stronger graph-based attack thinking
+- Real Azure/AD hybrid knowledge
+- Better enumeration discipline
+- A deeper understanding of Windows internals
 
-## Responsible Disclosure Timeline
+> 🧨 This cert didn’t just sharpen my red team skills—it changed how I approach entire enterprise networks.
 
-- **September 30, 2022**: Initial email sent to Palo Alto Networks reporting the bypass vulnerability.
-- **December 14, 2022**: Palo Alto Networks released a patch addressing the issue.
-- **December 14, 2022**: Findings and recommendations published in advisory [PAN-SA-2022-0005](https://security.paloaltonetworks.com/PAN-SA-2022-0005).
+---
+
+**Recommendation:**  
+Do CRTP first unless you’re already comfortable with AD enumeration and basic delegation abuse. CRTE assumes experience.
+
+**Score:** 9.5/10  
+Knocked a few points for a couple lab hiccups, but the support team resolved them fast.
+
+---
+
+**Next?**  
+Not sure—maybe CRTO, maybe some malware dev next. What I do know is that CRTE was worth every second.
+
+Until next time 👋  
+— Ben
