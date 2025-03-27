@@ -13,7 +13,7 @@ In October 2024, I earned the **Microsoft Cloud Red Team Professional (MCRTP)** 
 
 This review outlines my experience, the key topics covered, and my takeaways after completing the bootcamp and successfully passing the hands-on certification exam.
 
-![MCRTP Badge](https://media.licdn.com/dms/document/media/v2/D4D2DAQFcOv0GJzmMzw/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1730110987987?e=1744243200&v=beta&t=1XwInWN1QScvW8DX6GXX1VO2-xJP8MdDTZXHKA_7MX4)  
+![MCRTP Badge](https://img001.prntscr.com/file/img001/8fgGBMRGSj-4nRnR1KSyVQ.png)  
 > *The MCRTP badge issued by Pwned Labs after passing the hands-on exam.*
 
 ---
