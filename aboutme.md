@@ -49,7 +49,7 @@ Offensive Security Engineer and Security Researcher specializing in adversarial 
 | **eLearnSecurity Web Application Penetration Tester (eWPT)** | INE Security (FKA eLearnSecurity) | [View](https://verified.elearnsecurity.com/certificates/c2861046-4cd1-4b24-9505-1f839f316037){:target="_blank"} |
 | **Cisco Certified Network Associate (CCNA)** | Cisco | [View](https://www.credly.com/badges/e4fe2502-7308-47bb-ab88-37837bf68369){:target="_blank"} |
 | **Understanding of Cisco Network Devices** | Cisco | [View](https://www.credly.com/badges/ecca95d9-2043-4045-b95a-7d238a07bb4d){:target="_blank"} |
-| **Linux Enterprise Professional Certification (LPIC-1)** | Linux Professional Institute | [View](https://cs.lpi.org/caf/Xamman/certification/verify/LPI000387608/x4alv2ken9){:target="_blank"} |
+| **Linux Professional Institute Certification (LPIC-1)** | Linux Professional Institute | [View](https://cs.lpi.org/caf/Xamman/certification/verify/LPI000387608/x4alv2ken9){:target="_blank"} |
 | **Microsoft Certified Solutions Associate: SQL Server 2012/2014** | Microsoft | [View](https://www.credly.com/badges/99d258c8-ff81-4da3-845d-f62503c0a990){:target="_blank"} |
 | **Microsoft Certified Solutions Associate: Windows Server 2012** | Microsoft | [View](https://www.credly.com/badges/8835299b-252d-47a0-9bf0-d4c4edb1c6b8){:target="_blank"} |
 | **Exam 411: Administering Windows Server 2012** | Microsoft | [View](https://www.credly.com/badges/34d50911-8469-468e-93c9-4cdb2fe4d140){:target="_blank"} |
