@@ -6,8 +6,8 @@ date: 2022-12-22
 categories: [security-research, edr]
 tags: [EDR, Windows, registry]
 
-thumbnail-img: https://miro.medium.com/v2/resize:fit:1374/format:webp/0*PbLOP8kLASxiBntJ.jpg
-share-img: https://miro.medium.com/v2/resize:fit:1374/format:webp/0*PbLOP8kLASxiBntJ.jpg
+thumbnail-img: assets\img\MSSQL\Microsoft_SQL_server_logo.png
+share-img: assets\img\MSSQL\Microsoft_SQL_server_logo.png
 author: Ben Tamam
 comments: false
 readtime: true
