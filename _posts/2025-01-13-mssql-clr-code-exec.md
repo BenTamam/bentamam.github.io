@@ -76,10 +76,7 @@ We’ll create a **.NET assembly** that allocates memory, copies shellcode, and 
 
 - Create **SQL Server Database Project**.
 - Enable *Generate Script (.sql)* to auto-create a deploy script.  
-  ![VS](https://img001.prntscr.com/file/img001/iS6J0AZHRrioiL1LURYKDw.png){: width="900" }
-  ![Prop](https://img001.prntscr.com/file/img001/1mYYmsoPQla8uxbbN1gGlg.png){: width="900" }
 - Set **SQLCLR** property to **Unsafe**.  
-  ![SQLCLR Unsafe](https://img001.prntscr.com/file/img001/TOm9O0MRT9yPzCB8wOzQyA.png){: width="900" }
 
 ### Add a New SQL CLR Stored Procedure
 
@@ -134,8 +131,6 @@ public partial class StoredProcedures
 
 ## Step 3: Compiling the Assembly
 
-![Build](https://img001.prntscr.com/file/img001/yLx3BQHsQ3iKcYpAyfwBOA.png){: width="900" }
-
 ### Converting DLL to Hex
 
 ~~~powershell
@@ -188,4 +183,3 @@ EXEC shellcode_loader @shellcode;
 
 Once executed, you should see your shellcode run successfully.
 
-![SCEXEC](https://img001.prntscr.com/file/img001/3CkFJIEuQDiZcp4Bv3VMnA.png){: width="900" }
