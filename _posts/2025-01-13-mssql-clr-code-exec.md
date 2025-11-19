@@ -5,8 +5,8 @@ subtitle: "Shellcode execution from inside SQL Server via unsafe CLR"
 date: 2025-01-13
 categories: [security-research, red-teaming]
 tags: [MSSQL, CLR, shellcode, Windows]
-thumbnail-img: https://img001.prntscr.com/file/img001/iS6J0AZHRrioiL1LURYKDw.png
-share-img: https://img001.prntscr.com/file/img001/iS6J0AZHRrioiL1LURYKDw.png
+thumbnail-img: /assets/img/MSSQL/Microsoft_SQL_server_logo.png
+share-img: /assets/img/MSSQL/Microsoft_SQL_server_logo.png
 author: Ben Tamam
 comments: false
 readtime: true
