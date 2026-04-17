@@ -12,8 +12,8 @@ My work spans red team adversary simulation, vulnerability research, and Windows
 
 ## Recognition
 
-- **Israel National Cyber Directorate (INCD)** - Recognized vulnerability researcher. Reported security vulnerabilities to the national cyber authority and listed in INCD's researcher database. Member of the National Bug Hunters Forum, an invite-only community of researchers collaborating with INCD on vulnerability discovery to strengthen Israel's cyber defense.
 - **Palo Alto Networks** - Credited for responsible disclosure of a Cortex XDR tamper-protection bypass, published as [PAN-SA-2022-0005](https://security.paloaltonetworks.com/PAN-SA-2022-0005).
+- **Israel National Cyber Directorate (INCD)** - Contributed to national cyber defense by reporting security vulnerabilities to the national cyber authority.
 
 ## Published Research & Vulnerabilities
 
