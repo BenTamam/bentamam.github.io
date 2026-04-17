@@ -13,6 +13,9 @@ export default withMermaid(defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
+  sitemap: {
+    hostname: hostname,
+  },
   head: [
     ['link', { rel: 'icon', href: '/img/avatar-icon.png' }],
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'Ben Tamam - RSS Feed', href: '/feed.xml' }],
