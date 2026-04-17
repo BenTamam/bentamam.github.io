@@ -74,7 +74,7 @@ export default withMermaid(defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Advisories', link: '/advisories/tcexam-cve-2026-39202' },
       { text: 'Blog', link: '/blog/bypassing-cortex-xdr' },
-      { text: 'About', link: '/about' }
+      { text: 'About', link: '/aboutme' }
     ],
     sidebar: {
       '/advisories/': [
