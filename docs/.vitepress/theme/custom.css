@@ -1,0 +1,298 @@
+/* ── Brand Colors ── */
+:root {
+  --vp-c-brand-1: #264a73;
+  --vp-c-brand-2: #305a85;
+  --vp-c-brand-3: #1e3a5f;
+  --vp-c-brand-soft: rgba(38, 74, 115, 0.14);
+  --vp-home-hero-name-color: #264a73;
+}
+
+.dark {
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #2563eb;
+  --vp-c-brand-3: #1d4ed8;
+  --vp-c-brand-soft: rgba(59, 130, 246, 0.14);
+  --vp-home-hero-name-color: #3b82f6;
+  --vp-c-bg: #0f1117;
+  --vp-c-bg-alt: #151820;
+  --vp-c-bg-elv: #1a1d27;
+  --vp-c-bg-soft: #1a1d27;
+}
+
+/* ── Typography ── */
+:root {
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+}
+
+/* ── Navbar ── */
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+.dark .VPNavBar {
+  background: rgba(15, 17, 23, 0.85) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* ── Hero Section ── */
+.VPHero .text {
+  font-size: 2.5rem !important;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .tagline {
+  font-size: 1.1rem !important;
+  max-width: 560px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ── Feature Cards (Homepage) ── */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider) !important;
+  transition: border-color 0.3s, transform 0.2s !important;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  transform: translateY(-2px);
+}
+
+.dark .VPFeature {
+  background: var(--vp-c-bg-elv) !important;
+}
+
+/* ── Content Area ── */
+.vp-doc h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 0.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-top: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ── Code Blocks ── */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  margin: 1.5rem 0;
+}
+
+.dark .vp-doc div[class*='language-'] {
+  border-color: rgba(59, 130, 246, 0.1);
+}
+
+.vp-doc div[class*='language-'] code {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.vp-doc div[class*='language-'] .line-numbers-wrapper {
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+/* Language label styling */
+.vp-doc div[class*='language-']::before {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+/* ── Blockquotes (used as callouts) ── */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  padding: 1rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0;
+}
+
+.vp-doc blockquote p {
+  color: var(--vp-c-text-2);
+}
+
+/* ── Custom Containers ── */
+.vp-doc .custom-block {
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+}
+
+.vp-doc .custom-block.tip {
+  border-left: 4px solid #10b981;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.vp-doc .custom-block.warning {
+  border-left: 4px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.vp-doc .custom-block.danger {
+  border-left: 4px solid #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.vp-doc .custom-block.info {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+/* ── Tables ── */
+.vp-doc table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.dark .vp-doc tr {
+  background: var(--vp-c-bg-alt);
+}
+
+.dark .vp-doc tr:nth-child(2n) {
+  background: var(--vp-c-bg-elv);
+}
+
+.vp-doc th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+}
+
+.vp-doc td {
+  padding: 0.75rem 1rem;
+}
+
+/* ── Images in Posts ── */
+.vp-doc img {
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  margin: 1.5rem 0;
+  max-width: 100%;
+}
+
+/* ── Sidebar ── */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider) !important;
+}
+
+.dark .VPSidebar {
+  background: var(--vp-c-bg) !important;
+}
+
+.VPSidebarItem .text {
+  font-size: 0.9rem;
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
+
+/* ── Footer ── */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider) !important;
+}
+
+.dark .VPFooter {
+  background: var(--vp-c-bg) !important;
+}
+
+/* ── Outline (Table of Contents) ── */
+.VPDocOutlineItem .outline-link {
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.VPDocOutlineItem .outline-link:hover {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* ── Scrollbar ── */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--vp-c-bg);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2a2d37;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3a3d47;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(37, 99, 235, 0.3);
+  color: inherit;
+}
+
+/* ── Horizontal Rules ── */
+.vp-doc hr {
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+  margin: 2rem 0;
+}
+
+/* ── Links ── */
+.vp-doc a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* ── Inline Code ── */
+.vp-doc :not(pre) > code {
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.88em;
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: rgba(59, 130, 246, 0.1);
+  color: #93c5fd;
+}
+
+/* ── Shield Badge Rows ── */
+.vp-doc p.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.vp-doc p.badge-row img,
+.vp-doc p.badge-row a {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
