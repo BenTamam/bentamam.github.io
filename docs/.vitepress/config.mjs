@@ -20,10 +20,24 @@ export default withMermaid(defineConfig({
     ['meta', { name: 'theme-color', content: '#2563eb' }],
     ['meta', { name: 'author', content: 'Ben Tamam' }],
     ['meta', { name: 'keywords', content: 'security research, red team, offensive security, penetration testing, EDR evasion' }],
+    ['meta', { name: 'robots', content: 'index, follow, noai, noimageai' }],
+    ['meta', { name: 'googlebot', content: 'index, follow, noarchive' }],
+    ['meta', { name: 'GPTBot', content: 'noindex, nofollow' }],
+    ['meta', { name: 'ClaudeBot', content: 'noindex, nofollow' }],
+    ['meta', { name: 'CCBot', content: 'noindex, nofollow' }],
+    ['meta', { name: 'PerplexityBot', content: 'noindex, nofollow' }],
+    ['meta', { name: 'Google-Extended', content: 'noindex, nofollow' }],
+    ['meta', { name: 'Applebot-Extended', content: 'noindex, nofollow' }],
+    ['meta', { name: 'Bytespider', content: 'noindex, nofollow' }],
+    ['meta', { name: 'DataForSeoBot', content: 'noindex, nofollow' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Ben Tamam - Security Research' }],
-    ['meta', { property: 'og:description', content: 'Offensive Security Engineer & Security Researcher' }],
+    ['meta', { property: 'og:description', content: 'Offensive security research, vulnerability disclosures, and technique writeups.' }],
+    ['meta', { property: 'og:image', content: 'https://bentamam.github.io/img/avatar-icon.png' }],
+    ['meta', { property: 'og:site_name', content: 'Ben Tamam' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: 'Ben Tamam - Security Research' }],
+    ['meta', { name: 'twitter:description', content: 'Offensive security research, vulnerability disclosures, and technique writeups.' }],
   ],
   buildEnd: async (config) => {
     const feed = new Feed({
@@ -137,8 +151,8 @@ export default withMermaid(defineConfig({
       next: 'Next Post'
     },
     footer: {
-      message: 'Security Research & Red Teaming',
-      copyright: 'Copyright © 2026 Ben Tamam'
+      message: 'Content free to quote and share with attribution.',
+      copyright: '© 2026 Ben Tamam. All rights reserved.'
     },
     lastUpdated: {
       text: 'Last updated',
