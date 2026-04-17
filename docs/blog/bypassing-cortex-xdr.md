@@ -2,15 +2,15 @@
 title: "Bypassing Cortex XDR (PAN-SA-2022-0005)"
 description: "A tamper-protection bypass in Palo Alto Networks Cortex XDR Agent 7.8.0, disclosed under responsible disclosure and tracked as PAN-SA-2022-0005."
 tags: [edr, windows, registry, vulnerability-research]
-category: "Blog"
+category: "Advisory"
 date: 2022-12-22
 ---
 
 # Bypassing Cortex XDR (PAN-SA-2022-0005)
 
-This post details a tamper-protection bypass in Palo Alto Networks Cortex XDR Agent version 7.8.0. An attacker with administrative access to a protected endpoint can modify a single registry value belonging to the Windows Cryptographic Services (`CryptSvc`) service, causing the service to fail to start at the next boot. Because Cortex XDR has a hard runtime dependency on `CryptSvc`, the agent is rendered inoperable without triggering any tamper-protection event.
+A tamper-protection bypass in Palo Alto Networks Cortex XDR Agent version 7.8.0 lets an attacker with administrative access to a protected endpoint modify a single registry value belonging to the Windows Cryptographic Services (`CryptSvc`) service, causing the service to fail to start at the next boot. Because Cortex XDR has a hard runtime dependency on `CryptSvc`, the agent is rendered inoperable without triggering any tamper-protection event.
 
-The vulnerability was reported to Palo Alto Networks PSIRT on September 30, 2022, and patched on December 14, 2022 in advisory [PAN-SA-2022-0005](https://security.paloaltonetworks.com/PAN-SA-2022-0005).
+Reported to Palo Alto Networks PSIRT on September 30, 2022, and patched on December 14, 2022 in advisory [PAN-SA-2022-0005](https://security.paloaltonetworks.com/PAN-SA-2022-0005).
 
 ## Affected Product
 

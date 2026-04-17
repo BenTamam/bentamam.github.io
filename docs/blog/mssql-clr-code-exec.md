@@ -8,9 +8,9 @@ date: 2025-01-13
 
 # Code Execution via MSSQL CLR Assemblies
 
-Microsoft SQL Server supports the execution of managed .NET code inside the `sqlservr.exe` process through its Common Language Runtime (CLR) integration feature. When an assembly is registered with the `UNSAFE` permission set, it can invoke arbitrary Win32 APIs through P/Invoke, which enables in-process execution of native shellcode without spawning a child process. This post walks through the full technique: enabling CLR, compiling a loader assembly, converting it to the hex representation required by `CREATE ASSEMBLY`, and invoking the resulting stored procedure to run a payload.
+Microsoft SQL Server supports the execution of managed .NET code inside the `sqlservr.exe` process through its Common Language Runtime (CLR) integration feature. When an assembly is registered with the `UNSAFE` permission set, it can invoke arbitrary Win32 APIs through P/Invoke, which enables in-process execution of native shellcode without spawning a child process. The full technique below: enabling CLR, compiling a loader assembly, converting it to the hex representation required by `CREATE ASSEMBLY`, and invoking the resulting stored procedure to run a payload.
 
-The technique is a well-established post-exploitation primitive for adversaries who have obtained the `sysadmin` server role. It is described, among other places, in Offensive Security's PEN-300 course material. The content below is an independent write-up.
+The technique is a well-established post-exploitation primitive for adversaries who have obtained the `sysadmin` server role. It is described, among other places, in Offensive Security's PEN-300 course material.
 
 ## Environment
 

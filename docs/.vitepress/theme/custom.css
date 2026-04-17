@@ -296,3 +296,40 @@
   margin: 0;
   vertical-align: middle;
 }
+
+/* ── Mermaid diagrams ── */
+.vp-doc .mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 2rem 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  overflow-x: auto;
+}
+
+.vp-doc .mermaid svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 480px;
+}
+
+.vp-doc .mermaid .messageText,
+.vp-doc .mermaid .labelText,
+.vp-doc .mermaid .actor text,
+.vp-doc .mermaid .actor-top text,
+.vp-doc .mermaid .actor-bottom text,
+.vp-doc .mermaid .sequenceNumber,
+.vp-doc .mermaid text {
+  font-size: 18px !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.vp-doc .mermaid .note text,
+.vp-doc .mermaid .noteText {
+  font-size: 16px !important;
+}
