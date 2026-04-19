@@ -19,6 +19,7 @@ The posts here are the research I thought was worth writing up.
 
 | Advisory | Product | Description | Write-up | Date |
 |:---------|:--------|:------------|:---------|:-----|
+| [**CVE-2026-39209**](https://www.cve.org/CVERecord?id=CVE-2026-39209) | Keep (keephq/keep) | Authenticated Python code injection via IOHandler `eval()` on bracket-delimited workflow arguments | [Read](/advisories/keep-cve-2026-39209) | Apr 2026 |
 | [**CVE-2026-39202**](https://www.cve.org/CVERecord?id=CVE-2026-39202) | TCExam | Authenticated SQL injection with arbitrary file read via `selectsubject` parameter | [Read](/advisories/tcexam-cve-2026-39202) | Apr 2026 |
 | [**PAN-SA-2022-0005**](https://security.paloaltonetworks.com/PAN-SA-2022-0005) | Palo Alto Cortex XDR | Tamper-protection bypass in the Cortex XDR agent | [Read](/blog/bypassing-cortex-xdr) | Dec 2022 |
 
