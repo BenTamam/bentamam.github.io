@@ -7,11 +7,15 @@ hero:
   actions:
     - theme: brand
       text: Read the Latest
-      link: /advisories/tcexam-cve-2026-39202
+      link: /advisories/fastgpt-cve-2026-44287
     - theme: alt
       text: About Me
       link: /aboutme
 features:
+  - title: FastGPT code-sandbox RCE (CVE-2026-44287)
+    details: Sandbox escape in FastGPT's JS code-sandbox through 4.14.14. The dynamic-import denylist regex misses block comments between `import` and `(`, so `import/**/("child_process")` slips through and gives arbitrary command execution as uid=100(sandbox). Patched in 4.15.0-beta1.
+    link: /advisories/fastgpt-cve-2026-44287
+    linkText: Read the Advisory
   - title: TCExam SQL Injection (CVE-2026-39202)
     details: Authenticated SQL injection in TCExam through 16.6.2 via the selectsubject parameter. Error-based EXTRACTVALUE exfiltration plus arbitrary file read via LOAD_FILE. Patched same-day in 16.6.3.
     link: /advisories/tcexam-cve-2026-39202

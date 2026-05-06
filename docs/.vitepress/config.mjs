@@ -89,7 +89,7 @@ export default withMermaid(defineConfig({
     siteTitle: 'Ben Tamam',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Advisories', link: '/advisories/tcexam-cve-2026-39202' },
+      { text: 'Advisories', link: '/advisories/fastgpt-cve-2026-44287' },
       { text: 'Blog', link: '/blog/bypassing-cortex-xdr' },
       { text: 'About', link: '/aboutme' }
     ],
@@ -99,6 +99,7 @@ export default withMermaid(defineConfig({
           text: 'Advisories',
           collapsed: false,
           items: [
+            { text: 'FastGPT code-sandbox RCE (CVE-2026-44287)', link: '/advisories/fastgpt-cve-2026-44287' },
             { text: 'Keep IOHandler Code Injection (CVE-2026-39209)', link: '/advisories/keep-cve-2026-39209' },
             { text: 'TCExam SQL Injection (CVE-2026-39202)', link: '/advisories/tcexam-cve-2026-39202' },
             { text: 'Bypassing Cortex XDR (PAN-SA-2022-0005)', link: '/blog/bypassing-cortex-xdr' },
@@ -117,6 +118,7 @@ export default withMermaid(defineConfig({
           text: 'Advisories',
           collapsed: false,
           items: [
+            { text: 'FastGPT code-sandbox RCE (CVE-2026-44287)', link: '/advisories/fastgpt-cve-2026-44287' },
             { text: 'Keep IOHandler Code Injection (CVE-2026-39209)', link: '/advisories/keep-cve-2026-39209' },
             { text: 'TCExam SQL Injection (CVE-2026-39202)', link: '/advisories/tcexam-cve-2026-39202' },
             { text: 'Bypassing Cortex XDR (PAN-SA-2022-0005)', link: '/blog/bypassing-cortex-xdr' },
